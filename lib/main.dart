@@ -16,8 +16,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'WhatsApp Clone',
       theme: ThemeData.dark().copyWith(
-        primaryColor: tealGreen,
-      ),
+          floatingActionButtonTheme:
+              const FloatingActionButtonThemeData(backgroundColor: tealGreen)),
       home: const WhatsAppHome(),
     );
   }
