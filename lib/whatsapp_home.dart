@@ -17,9 +17,9 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
   void initState() {
     super.initState();
     _tabController = TabController(length: 4, vsync: this, initialIndex: 1);
-    _tabController.addListener(() {
+    _tabController.animation!.addListener(() {
       setState(() {
-        _page = _tabController.index;
+        _page = (_tabController.animation!.value).round();
       });
     });
   }
