@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp/screens/chat_screen.dart';
-import 'package:whatsapp/utils/colors.dart';
+import './screens/select_chat_screen.dart';
+import './screens/status_screen.dart';
+import './widgets/pop_menu.dart';
+import './screens/chat_screen.dart';
+import './utils/colors.dart';
 
 class WhatsAppHome extends StatefulWidget {
   const WhatsAppHome({Key? key}) : super(key: key);
@@ -34,25 +37,19 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        foregroundColor: Colors.white60,
         backgroundColor: tealGreenDark,
         elevation: 0.7,
         title: const Text('WhatsApp'),
         actions: [
           IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.search,
-                size: 27,
-              )),
-
-          ///need to change this lator.
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8),
-            child: Icon(
-              Icons.more_vert,
+            onPressed: () {},
+            icon: const Icon(
+              Icons.search,
               size: 27,
             ),
           ),
+          PopupMenu(page: _page),
         ],
         bottom: TabBar(
           indicatorColor: tealGreen,
@@ -93,22 +90,56 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
             child: Text('Camera'),
           ),
           ChatScreen(),
-          Center(
-            child: Text('Status'),
-          ),
+          StatusScreen(),
           Center(
             child: Text('Calls'),
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        child: _page == 1
-            ? const Icon(Icons.message)
-            : _page == 2
-                ? const Icon(Icons.camera_alt)
-                : const Icon(Icons.call),
-        onPressed: () {},
-      ),
+      floatingActionButton: _page == 2
+          ? Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                FloatingActionButton(
+                  mini: true,
+                  onPressed: () {},
+                  child: const Icon(
+                    Icons.edit,
+                    size: 18,
+                    color: Colors.white,
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                FloatingActionButton(
+                  onPressed: () {},
+                  child: const Icon(Icons.camera_alt, color: Colors.white),
+                ),
+              ],
+            )
+          : FloatingActionButton(
+              child: _page == 1
+                  ? const Icon(
+                      Icons.message_outlined,
+                      color: Colors.white,
+                    )
+                  : _page == 2
+                      ? const Icon(
+                          Icons.camera_alt,
+                          color: Colors.white,
+                        )
+                      : const Icon(
+                          Icons.call,
+                          color: Colors.white,
+                        ),
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                      builder: (context) => const SelectContact()),
+                );
+              },
+            ),
     );
   }
 }
