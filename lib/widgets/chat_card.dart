@@ -13,7 +13,7 @@ class ChatCard extends StatelessWidget {
       // contentPadding: const EdgeInsets.all(4),
       leading: CircleAvatar(
         backgroundImage: NetworkImage(chat.avatarUrl),
-        radius: 30,
+        radius: 25,
       ),
       title: Text(
         chat.name,
