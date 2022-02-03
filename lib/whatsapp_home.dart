@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp/screens/calls_screen.dart';
 import './screens/select_chat_screen.dart';
 import './screens/status_screen.dart';
 import './widgets/pop_menu.dart';
@@ -91,9 +92,7 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
           ),
           ChatScreen(),
           StatusScreen(),
-          Center(
-            child: Text('Calls'),
-          ),
+          CallScreen(),
         ],
       ),
       floatingActionButton: _page == 2
@@ -130,7 +129,7 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
                           color: Colors.white,
                         )
                       : const Icon(
-                          Icons.call,
+                          Icons.add_ic_call_rounded,
                           color: Colors.white,
                         ),
               onPressed: () {
