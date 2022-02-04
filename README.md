@@ -1,7 +1,17 @@
 # whatsapp
 
-A new Flutter project.
+**A WhatsApp UI Clone with flutter**
 
+(Dark Mode)
+
+## Screenshots
+
+<img src = "screenshots/Screenshot_1643965650.png" height="300em" />
+<img src="screenshots/Screenshot_1643965656.png" height="300em"/>
+<img src="screenshots/Screenshot_1643965659.png" height="300em"/>
+<img src="screenshots/Screenshot_1643965632.png" height="300em"/>
+
+#### *video soon*
 ## Getting Started
 
 This project is a starting point for a Flutter application.
