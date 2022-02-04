@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp/models/user.dart';
+import 'package:whatsapp/screens/chat_screen_main.dart';
 import '../models/chat_model.dart';
 
 class ChatCard extends StatelessWidget {
@@ -21,6 +23,18 @@ class ChatCard extends StatelessWidget {
       ),
       subtitle: Text(chat.message),
       trailing: Text(chat.time),
+      onTap: () {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => MessageScreen(
+              user: User(
+                  name: chat.name,
+                  lastScene: "2:30 pm",
+                  avatarUrl: chat.avatarUrl),
+            ),
+          ),
+        );
+      },
     );
   }
 }
