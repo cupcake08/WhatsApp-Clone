@@ -6,11 +6,12 @@
 
 ## Screenshots
 
-<img src = "screenshots/Screenshot_1643965650.png" height="300em" />
-<img src="screenshots/Screenshot_1643965656.png" height="300em"/>
-<img src="screenshots/Screenshot_1643965659.png" height="300em"/>
-<img src="screenshots/Screenshot_1643965632.png" height="300em"/>
-
+|     |     |     |
+| :-: | :-: | :-: |
+| Home Screen | Status Tab | Call Screen |
+| <img src="screenshots/Screenshot_1643965650.png" height="300" /> | <img src="screenshots/Screenshot_1643965656.png" height="300" /> | <img src="screenshots/Screenshot_1643965659.png" height="300" />|
+| Chat Screen 1  | Chat Screen 2 | Chat Screen 3 |
+| <img src="screenshots/Screenshot_1644055238.png" height="300" /> | <img src="screenshots/Screenshot_1644055259.png" height="300" /> | <img src="screenshots/Screenshot_1644055263.png" height="300" />|
 #### *video soon*
 ## Getting Started
 
