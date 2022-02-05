@@ -26,10 +26,11 @@ class _MessageBarState extends State<MessageBar> {
       children: [
         Expanded(
           child: ListView.builder(
+            shrinkWrap: true,
             itemBuilder: (context, index) {
               return MessageCard(msg: widget.msgs[index]);
             },
-            itemCount: 9,
+            itemCount: widget.msgs.length,
           ),
         ),
         Container(

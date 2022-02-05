@@ -31,4 +31,10 @@ const List<Message> messageList = [
   Message(msg: "Bye!", time: "2:30 pm", date: "21 december, 2021"),
   Message(
       msg: "Bye!", time: "2:30 pm", date: "21 december, 2021", isSender: true),
+  Message(
+      msg:
+          "kkasjfoima c ojaowjo jownf w o n oqwnfw  qnmowenf   nqowfw no qwwfn.",
+      time: "2:30 pm",
+      date: "21 december, 2021",
+      isSender: true),
 ];
